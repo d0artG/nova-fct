@@ -4,7 +4,8 @@
 # ── Auxiliary directory ───────────────────────────────────────────────────────
 # Honour the AUXDIR env var exported by the Makefile; fall back to ./AUXDIR.
 # Note: AUXDIR deletion (make clean) also removes the minted cache inside it.
-$aux_dir = $ENV{AUXDIR} // './AUXDIR';
+$aux_dir = $ENV{AUXDIR} // 'd:/nova-fct/AUXDIR';
+$out_dir = $ENV{AUXDIR} // 'd:/nova-fct/AUXDIR';
 
 # ── TEXINPUTS: expose novathesis internal packages to kpathsea ───────────────
 # Adding StyFiles and Strings as explicit directories means kpathsea finds
@@ -12,7 +13,8 @@ $aux_dir = $ENV{AUXDIR} // './AUXDIR';
 # Without this, kpathsea falls back to the \input@path recursive search which
 # resolves files with a path prefix, causing "requested X but provides Y"
 # warnings because the prefix mismatches the \ProvidesPackage declaration.
-$ENV{TEXINPUTS} = './novathesisFiles/StyFiles/:./novathesisFiles/Strings/:'
+# FIXED — semicolon separators + absolute paths
+$ENV{TEXINPUTS} = 'd:/nova-fct/novathesisFiles/StyFiles/;d:/nova-fct/novathesisFiles/Strings/;'
                 . ($ENV{TEXINPUTS} // '');
 
 # ── Git commit id, for bug reports ────────────────────────────────────────────
