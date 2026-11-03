@@ -428,4 +428,26 @@ $RECYCLE.BIN/
 ### Scripts ###
 Scripts/
 
+#Stuff
+
+template.aux
+template.bbl
+template.bcf
+template.blg
+template.fdb_latexmk
+template.fls
+template.glg
+template.glstex
+template-1.glstex
+template.loa
+template.lof
+template.log
+template.lol
+template.lot
+template.pdf
+template.run.xml
+template.synctex.gz
+template.toc
+nt-gitinfo.def
+
 # End of https://www.toptal.com/developers/gitignore/api/latex,windows,linux,macos
